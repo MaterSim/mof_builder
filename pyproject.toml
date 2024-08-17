@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xtal_lego"
+version = "0.0.1"
+description = "Crystal builder from LEGO like Blocks"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = {text = "MIT"}
+authors = [
+    {name = "Qiang Zhu", email = "alecfans@gmail.com"}
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pyxtal>=1.0.0",
+    "juliacall",
+]
+urls = { "Homepage" = "https://github.com/MaterSim/xtal_lego" }
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+test = [
+    "wheel",
+    "pytest",
+    "coverage",
+    "pytest-cov",
+    "monty>=2024.2.26"
+]
+
+[tool.setuptools.packages]
+find = { where = ["xtal_lego"] }
+
+#[tool.setuptools.package-data]
+# Uncomment and adjust paths if needed:
+# "pyxtal.database" = ["*.csv", "*.json", "*.db"]
+# "pyxtal.database.cifs" = ["*.cif", "*.vasp"]
+# "pyxtal.potentials" = ["*"]
