@@ -1188,17 +1188,12 @@ if __name__ == "__main__":
     builder.set_criteria(CN={'C': [3]})
     print(builder)
     print(builder.ref_xtal)
-    if True:
-        random.seed(None)
+    if False:
         wp_libs = builder.get_wp_libs_from_spglist([191, 179], ncpu=1)
-        #wp_libs = builder.get_wp_libs_from_spglist([191, 179], ncpu=2)
-
         for wp_lib in wp_libs[:4]: print(wp_lib)
-        #builder.generate_xtals_from_wp_libs(wp_libs[4:6], ncpu=1, N_max=4, early_quit=0.05)
         builder.generate_xtals_from_wp_libs(wp_libs[4:8], ncpu=2, N_max=4, early_quit=0.05)
 
-    if True:
-        random.seed(None)
+    if False:
         spg, wps = 179, ['6a', '6a', '6a', '6a']
         xtals = []
         for x in [
@@ -1213,6 +1208,5 @@ if __name__ == "__main__":
             xtal = pyxtal()
             xtal.from_spg_wps_rep(spg, wps, x, ['C']*len(wps))
             xtals.append(xtal)
-            builder.optimize_xtal(xtal, opt_type='local')
-        builder.optimize_xtals(xtals, opt_type='local', ncpu=1)
-        #builder.optimize_xtals(xtals, opt_type='local', ncpu=2)
+            builder.optimize_xtal(xtal)
+        builder.optimize_xtals(xtals)
