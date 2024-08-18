@@ -13,7 +13,7 @@ authors = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "pyxtal>=1.0.0",
+    "pyxtal>=1.0.1",
     "juliacall",
 ]
 urls = { "Homepage" = "https://github.com/MaterSim/xtal_lego" }

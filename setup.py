@@ -27,7 +27,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "pyxtal>=1.0.0",
+        "pyxtal>=1.0.1",
         "juliacall",
         #"importlib_metadata>=1.4",
         #"typing-extensions>=4.12",
