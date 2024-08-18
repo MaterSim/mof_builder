@@ -1,11 +1,5 @@
-# xtal-lego
+# xtal_lego
 Crystal Generator with the desired local coordination environment. 
-
-ou need to run two external packages 
-- `GULP`: based on classical force field
-- `dftbplus`: based on density functional tight-binding
-
-Detailed instructions can be found at the subdiectory of [Installation](https://github.com/qzhu2017/MOF-Builder/tree/main/Installation)
 
 
 ### Initialization
@@ -77,5 +71,13 @@ After Opt*  8   2  212 P4332          2.46     0.000 8c
 
 This example does not only show how to call `optmize_xtal` function via `mof_builder`, 
 but also illustrate that optimization under different space group representation can lead to different results.
+
+### Post-analysis 
+
+You may need to run two external packages 
+- `GULP`: based on classical force field
+- `dftbplus`: based on density functional tight-binding
+
+Detailed instructions can be found at the subdiectory of [Installation](https://github.com/qzhu2017/MOF-Builder/tree/main/Installation)
 
 
